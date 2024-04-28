@@ -4,37 +4,51 @@ const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 const LANGUAGE = "&language=es-ES";
 const FILTER_POPULARITY = "&sort_by=popularity.desc&with_origin_country=US";
 const URLSEARCH = "https://api.themoviedb.org/3/search/tv";
+ const url = `${URL_DISCOVER}?api_key=${API_KEY}${FILTER_POPULARITY}${LANGUAGE}`;
 
-// Function to fetch data from TMDB API
+
+// fetch data from  API
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
   return data.results;
 }
 
-// Function to populate grid cards
+ 
+//  grid cards
 async function populateGrid() {
   const gridSection = document.getElementById('grid-cards');
-  const url = `${URL_DISCOVER}?api_key=${API_KEY}${FILTER_POPULARITY}${LANGUAGE}`;
   const results = await fetchData(url);
   gridSection.innerHTML = results.map(result => `
-    <div class="card">
-      <img src="${URL_IMAGE}${result.poster_path}" class="card-img-top  .img-fluid .img-thumbnail rounded" alt="${result.name}">
+    <div class="card animGrid">
+      <img src="${URL_IMAGE}${result.poster_path}" class="card-img-top .img-fluid .img-thumbnail rounded fade-in-center" alt="${result.name}">
       <div class="card-body">
-        <h5 class="card-title">${result.name}</h5>
+        <h5 class="card-title" style="visibility: hidden">${result.name}</h5> 
       </div>
     </div>
   `).join('');
+
+  // Add event listeners to toggle visibility of card title on hover
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelector('.card-title').style.visibility = 'visible';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.card-title').style.visibility = 'hidden';
+    });
+  });
 }
 
-// Function to populate carousel cards
+
+// carousel cards
 async function populateCarousel() {
     const carouselSection = document.getElementById('carousel-cards');
     const url = `${URL_DISCOVER}?api_key=${API_KEY}${FILTER_POPULARITY}${LANGUAGE}&page=2`;
     const results = await fetchData(url);
     
     carouselSection.innerHTML = results.map(result => `
-      <div class="carousel-item card">
+      <div class="carousel-item card ">
         <img src="${URL_IMAGE}${result.poster_path}" class="d-block card-img-top  .img-fluid .img-thumbnail rounded" alt="${result.name}">
       </div>
     `).join('');
@@ -54,6 +68,22 @@ document.getElementById('search-button').addEventListener('click', async () => {
   console.log(results); 
 });
 
-// Call functions to populate grid and carousel
+//Animation for search box
+
+ const input = document.getElementById('search-section');
+ const observer = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+     if (entry.isIntersecting) {
+       entry.target.classList.add('animFromTop'); // Add animation class
+       observer.unobserve(entry.target); // Stop observing once animation applied
+     }
+   });
+ });
+
+
+
+
+// Call functions 
 populateGrid();
 populateCarousel();
+ observer.observe(input);

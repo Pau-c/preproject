@@ -1,23 +1,63 @@
 /* Custom CSS */
 body {
-    padding-top: 56px; /* Adjust based on header height */
+    padding-top: 56px; 
+    background-color:#1d5d80;
   }
   .sticky-top {
     top: 0;
     z-index: 1020;
+
+    
   }
+
+  .btn{
+  font-weight: bold;
+  }
+
+  .btn-search{
+    background-color: #E89B26;
+    }
+
+
+.btn-other{
+  background-color: #1d5d80;
+  color: white;
+}
+
+.btn-other:hover{
+  background-color: #396d89;
+  color: rgb(255, 255, 255);
+}
+
   .search-section {
     padding: 20px;
   }
   .card {
-    width: calc(33.33% - 20px); /* 3 columns with 20px margin between */
+    width: calc(33.33% - 50px); /* 3 columns with 20px margin between */
     margin: 10px;
+    /* border:none; */
   }
   .card-img-top {
     height: auto;
     width: 100%;
+
+
   }
-  /* Additional CSS for responsive design */
+
+
+.first-section{
+
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-image: url("./public/bg2.jpg");
+    font-weight: bolder;
+    color:white;
+
+}
+
+
   @media (max-width: 768px) {
     .card {
       width: calc(50% - 20px); /* 2 columns with 20px margin between */
@@ -29,6 +69,64 @@ body {
     }
     .card {
       width: calc(100% - 20px); /* 1 column with 20px margin between */
+      border-radius: 10px;
     }
   }
+
+
+/*  css animations */
+/* main grid */
+  @keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
   
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .animGrid{
+  animation: myAnim 2s ease 0s 1 normal none;
+  
+}
+
+
+  /* search input */
+  @keyframes topAnim {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animFromTop{
+  animation: topAnim 2s ease 0s 1 normal none;
+ 
+}
+
+/* animation for individual cards */
+@keyframes fade-center {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-in-center {
+	opacity: 0.8; /* Start with opacity 0 */
+	transition: opacity 1s ease; /* Define transition */
+}
+
+.fade-in-center:hover {
+	animation: fade-center 2s ease; /* Apply animation on hover */
+}

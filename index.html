@@ -10,13 +10,13 @@
 <body>
 
 <!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" href="#">TMDB API</a>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top mt-0 mb-4" style="background-color: #E89B26;">
+  <a class="navbar-brand" href="index.html">TMDB API</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav text-secondary" style="font-weight: bold;">
       <li class="nav-item">
         <a class="nav-link" href="#">Link 1</a>
       </li>
@@ -24,27 +24,35 @@
         <a class="nav-link" href="#">Link 2</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 3</a>
+        <button class="btn  btn-other " type="button" id="login-button">Ingresar</button>
       </li>
     </ul>
   </div>
 </nav>
 
-<!-- Sections -->
-<div class="container">
+<!-- Sections falta  el footer-->
+<div class="container-fluid ">
+ <section>
+  <div class=" w-100 first-section m-0 p-0  vh-100 text-center ">
+    <h1 class="h-50 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h1>
+
+    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h2>
+
+  </div>
+  </section>
   <!-- Search Section -->
-  <section id="search-section" class="search-section">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for TV shows" id="search-input">
+  <section id="search-section" class="search-section ">
+    <div class="input-group w-50 ">
+      <input type="text" class="form-control rounded-4 " placeholder="Buscar" id="searchInput">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="search-button">Search</button>
+        <button class="btn rounded-4 btn-search " type="button" id="search-button">Search</button>
       </div>
     </div>
   </section>
 
   <!-- Grid Section -->
   <section id="grid-section">
-    <div class="row" id="grid-cards">
+    <div class="row animGrid" id="grid-cards">
       <!-- Cards  -->
     </div>
   </section>
