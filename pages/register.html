@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/style.css">
+  <link rel="icon" href="../public/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top mt-0 mb-4" style="background-color: #E89B26;">
+  <a class="navbar-brand" href="../index.html"> TMDB API <img src="../public/favicon.svg" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav text-secondary">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tendencias</a>
+      </li>
+      <li class="nav-item">
+        <a href="./login.html"class="btn  btn-other nav-link text-light" type="button" id="login-button"> Iniciar Sesion</a>
+
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Header -->
+<div class="container container-fluid "> 
+<h1 class="first-section m-2 p-2">Registrarse</h1>
+<div class="container m-5 w-50 align-content-center">
+    <form class="needs-validation " novalidate>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+            <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+            <div class="invalid-feedback">Ingresa un e-mail válido.</div>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+            <div class="invalid-feedback">Ingresa una contraseña.</div>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="dob" placeholder="Fecha de Nacimiento dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+            <div class="invalid-feedback">Ingresa una fecha válida dd/mm/yyyy.</div>
+        </div>
+        <div class="mb-3">
+            <select class="form-select" id="country" required>
+                <option value="">País</option>
+            </select>
+            <div class="invalid-feedback"> Selecciona tu país.</div>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms" required>
+            <label class="form-check-label text-light" for="terms">Acepto términos y condiciones</label>
+            <div class="invalid-feedback">Aceptar los términos y condiciones.</div>
+        </div>
+        <button type="submit" class="btn btn-search">Registrarse</button>
+    </form>
+</div>
+</div>
+ </div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="../js/countries.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

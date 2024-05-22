@@ -11,7 +11,7 @@ body {
   }
 
   .btn{
-  font-weight: bold;
+  font-weight: normal;
   }
 
   .btn-search{
@@ -21,12 +21,14 @@ body {
 
 .btn-other{
   background-color: #1d5d80;
-  color: white;
+  color: white; 
+
 }
 
 .btn-other:hover{
   background-color: #396d89;
   color: rgb(255, 255, 255);
+
 }
 
   .search-section {
@@ -44,6 +46,17 @@ body {
 
   }
 
+  input, select, textarea, .form-control, .form-select, .form-check-inputt{
+border-radius: 1em;
+border-color: #E89B26 !important;
+border-width: 5px;
+  }
+
+.invalid-feedback{
+background-color: #E89B26;
+font-weight: bolder;
+width: fit-content;
+  }
 
 .first-section{
 
@@ -51,10 +64,40 @@ body {
     width: 100%;
     margin: 0%;
     padding: 0%;
-    background-image: url("./public/bg2.jpg");
+    background-image: url("./bg2.jpg");
     font-weight: bolder;
     color:white;
+}
 
+
+h1{
+
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+  font-size: 5rem;
+  
+}
+h2{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+font-size: 4rem;
+
+}
+
+
+h5, .navbar, footer{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.footer-text{
+  color: rgb(81, 58, 31) !important;
+}
+.footer-text:hover{
+  color: rgb(0, 0, 0) !important;
 }
 
 
@@ -72,6 +115,30 @@ body {
       border-radius: 10px;
     }
   }
+/* scroller button */
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E89B26;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollToTopButton img {
+  width: 24px;
+  height: 24px;
+}
+
+
+#scrollToTopButton:hover {
+    background-color: #d9821c;
+}
+
 
 
 /*  css animations */

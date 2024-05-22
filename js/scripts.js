@@ -6,7 +6,6 @@ const FILTER_POPULARITY = "&sort_by=popularity.desc&with_origin_country=US";
 const URLSEARCH = "https://api.themoviedb.org/3/search/tv";
  const url = `${URL_DISCOVER}?api_key=${API_KEY}${FILTER_POPULARITY}${LANGUAGE}`;
 
-
 // fetch data from  API
 async function fetchData(url) {
   const response = await fetch(url);
