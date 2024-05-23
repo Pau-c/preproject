@@ -16,7 +16,7 @@
 
 <!-- Header -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top mt-0 mb-4" style="background-color: #E89B26;">
-  <a class="navbar-brand" href="index.html"> TMDB API  <img src="./public/favicon.svg" alt="Logo"></a>
+  <a class="navbar-brand" href="index.html">TMDB API   <img src="./public/favicon.svg" alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,16 +38,16 @@
 <!-- Sections 1-->
 <div class="container-fluid ">
  <section>
-  <div class=" w-100 first-section m-0 p-0   text-center ">
-    <h1 class="vh-50 ">Series ilimitadas en un solo lugar</h1>
+  <div class=" w-100  m-3 p-3 mb-5 align-content-center ">
+    <h1 class=" first-section">Series ilimitadas en un solo lugar</h1>
 
-    <h2>Disfruta en donde quieras. </h2>
-<h2>Cancela en cualquier momento</h2>
+    <h2 class="first-section">Disfruta en donde quieras. </h2>
+<h2 class="first-section">Cancela en cualquier momento</h2>
   </div>
   </section>
   <!-- Search Section -->
-  <section id="search-section" class="search-section ">
-    <div class="input-group w-50 ">
+  <section id="search-section " class="search-section animFromTop">
+    <div class="input-group w-50 m-2 p-3 ">
       <input type="text" class="form-control rounded-4 " placeholder="Buscar" id="searchInput">
       <div class="input-group-append">
         <button class="btn rounded-4 btn-search " type="button" id="search-button">Buscar</button>
@@ -61,6 +61,11 @@
       <!-- Cards  -->
     </div>
   </section>
+
+        <!-- Scroller Button -->
+        <div id="scrollToTopButtonContainer"> 
+          <link rel="icon" href="./public/scrollUp.svg" type="image/svg+xml">
+        </div>
 
   <!-- Carousel Section -->
   <section id="carousel-section" class="mt-4">
@@ -80,10 +85,7 @@
       </a>
     </div>
   </section>
-      <!-- Scroller Button -->
-  <div id="scrollToTopButtonContainer"> 
-    <link rel="icon" href="./public/scrollUp.svg" type="image/svg+xml">
-  </div>
+
 
     <!-- Footer Section -->
   <footer class="footer mt-0 mb-4 py-3" style="background-color: #E89B26;">
